@@ -28,7 +28,7 @@ var formSubmitHandler = function (event) {
 
 var getCityInfo = function (cityName) {
     //http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=d30eb409adf6829e86efa6d32c0dfe62
-    var apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=d30eb409adf6829e86efa6d32c0dfe62';
+    var apiUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=d30eb409adf6829e86efa6d32c0dfe62';
 
     //console.log("Step 1. apiUrl " + apiUrl);
   
@@ -169,7 +169,7 @@ function showNextFiveDayWeatherInfo(data, cityName)
 
             dayInfoElement.appendChild(humidityElement);
 
-            var iconURL = 'http://openweathermap.org/img/wn/' + iconId + '@2x.png';
+            var iconURL = 'https://openweathermap.org/img/wn/' + iconId + '@2x.png';
             var iconElement = document.createElement('div');
             iconElement.innerHTML = "<img src=" + iconURL + ">";
 
@@ -212,7 +212,7 @@ function showTodayWeatherInfo(weatherInfo, cityName)
 
     dayInfoElement.appendChild(humidity);
 
-    var iconURL = 'http://openweathermap.org/img/wn/' + weatherInfo.Iconid + '@2x.png';
+    var iconURL = 'https://openweathermap.org/img/wn/' + weatherInfo.Iconid + '@2x.png';
     var iconElement = document.createElement('div');
     iconElement.innerHTML = "<img src=" + iconURL + ">";
 
